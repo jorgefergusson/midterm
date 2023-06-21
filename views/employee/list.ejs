@@ -1,0 +1,33 @@
+<%- include ../partials/header.ejs %> <%- include ../partials/top_nav.ejs %>
+<main class="container">
+  <h1><%= title %></h1>
+  <br>
+
+  <a href="/employee/add" class="btn btn-primary"> <b>+</b> Add an employee</a>
+  <table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Contact Number</th>
+            <th scope="col">Remove</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for(let index=0; index<EmployeeList.length;index++) { %>
+            <tr>
+                <td><%= EmployeeList[index].name %></td>
+                <td><%= EmployeeList[index].address %></td>
+                <td><%= EmployeeList[index].contactNumber %></td>
+                <td>
+                    <a href="/employee/delete/<%= EmployeeList[index].id %>" class="btn btn-danger btn-sm"> <i class="fa-solid fa-trash fa-lg"></i> Delete</a>
+                </td>
+            </tr>
+        <% } %>
+    </tbody>
+    
+  </table>
+
+</main>
+
+<%- include ../partials/footer.ejs %> <%- include ../partials/bottom_nav.ejs %>
