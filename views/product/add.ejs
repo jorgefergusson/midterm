@@ -1,0 +1,24 @@
+<%- include ../partials/header.ejs %> <%- include ../partials/top_nav.ejs %>
+<main class="container">
+  <h1><%= title %></h1>
+  <p>Welcome to <%= title %></p>
+  <form class="form" method="post">
+    <div class="form-group">
+      <label for="pname">Name:</label>
+      <input type="text" class="form-control" id="pname" name="pname" />
+    </div>
+    <div class="form-group">
+      <label for="pcompany">Company:</label>
+      <input type="text" class="form-control" id="pcompany" name="pcompany" />
+    </div>
+    <div class="form-group">
+      <label for="pprice">Price:</label>
+      <input type="text" class="form-control" id="pprice" name="pprice" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-danger">Reset</button>
+  </form>
+</main>
+
+<%- include ../partials/footer.ejs %> <%- include ../partials/bottom_nav.ejs %>
